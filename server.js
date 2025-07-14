@@ -71,7 +71,7 @@ app.get('/api/lanches', (req, res) => {
     const lanches = require(path.join(__dirname, 'public', 'data', 'lanches.json'));
     
     // Estética da exibição do JSON 
-    const jsonFormatado = JSON.stringify(lanches, null, 2);
+    const jsonFormatado = JSON.stringify(lanches, null, 3);
     res.type('application/json');
     res.send(jsonFormatado);
 });
