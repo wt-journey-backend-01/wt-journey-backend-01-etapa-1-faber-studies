@@ -69,8 +69,10 @@ app.post('/contato', (req, res) => {
 
 app.get('/api/lanches', (req, res) => {
     const lanches = require(path.join(__dirname, 'public', 'data', 'lanches.json'));
-    const jsonFormatado = JSON.stringify(lanches, null, 2); // ← identação de 2 espaços
-    res.type('application/json'); // define o Content-Type corretamente
+    
+    // Estética da exibição do JSON 
+    const jsonFormatado = JSON.stringify(lanches, null, 2);
+    res.type('application/json');
     res.send(jsonFormatado);
 });
 
